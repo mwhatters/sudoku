@@ -15,7 +15,7 @@ class SudokuSolver
 
   def unflatten(item)
     item.is_a?(Array) ? item.each_slice(9).to_a : to_int(item).each_slice(9).to_a
-  ends
+  end
 
   def display_board(board)
     unflatten(board).each do |row|
@@ -70,6 +70,6 @@ class SudokuSolver
       end
       sudoku_number += 1
     end
+    alse
   end
-  false
 end
