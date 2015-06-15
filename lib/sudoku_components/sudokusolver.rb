@@ -1,5 +1,4 @@
 require_relative 'sudokuwincheck'
-require_relative 'graphutils'
 
 class SudokuSolver
   # takes a specialized string as input
@@ -48,9 +47,9 @@ class SudokuSolver
     end
 
     while sudoku_number < 10
-      forward_check = 1
-      while @given_numbers.include?(current_index + forward_check)
-        forward_check += 1
+      forward = 1
+      while @given_numbers.include?(current_index + forward)
+        forward += 1
       end
 
       system('clear')
@@ -66,10 +65,10 @@ class SudokuSolver
           p "solved"
           return true
         end
-        return true if solve(cloneboard, current_index + forward_check)
+        return true if solve(cloneboard, current_index + forward)
       end
       sudoku_number += 1
     end
-    alse
+    false
   end
 end

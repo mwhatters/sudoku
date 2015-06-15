@@ -1,4 +1,4 @@
-require_relative 'graphutils'
+require_relative '../graphutils/graphutils'
 
 class SudokuWinChecker
 # Expects to be initialized with a two-d array
