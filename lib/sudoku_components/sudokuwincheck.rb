@@ -1,8 +1,7 @@
-require_relative '../graphutils/graphutils'
+require 'graphutils'
 
 class SudokuWinChecker
 # Expects to be initialized with a two-d array
-  include GraphUtils
   def initialize(board)
     @board = board
   end
